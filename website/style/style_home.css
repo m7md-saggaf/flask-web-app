@@ -1,0 +1,283 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway&display=swap);
+
+.wrap {
+  overflow-x: hidden;
+}
+
+.my-sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+img {
+  border-style: none;
+}
+
+html {
+  text-align: center;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+nav {
+  background-color: black;
+  z-index: 1;
+  border-bottom: 4px solid #00ced1;
+  border-radius: 0 0 0.25rem 0.25rem;
+  display: flex;
+  align-items: center;
+  text-align: left;
+  width: 100%;
+  padding: 24px 0px 24px 0px;
+}
+
+main {
+  display: block;
+  top: 50%;
+  padding-top: 3%;
+}
+
+a {
+  color: inherit;
+  text-decoration: inherit;
+  background-color: transparent;
+  font-family: "Raleway", sans-serif;
+  outline: 0;
+}
+
+p {
+  font-family: "Raleway", sans-serif;
+  width: 80%;
+  text-align: justify;
+  display: inline-block;
+}
+
+footer {
+  padding: 16px 0px 16px 0;
+  border-top: 4px solid #00ced1;
+  border-radius: 0.25rem 0.25rem 0 0;
+  width: 100%;
+  background-color: black;
+  z-index: 1;
+  display: flex;
+  margin-top: auto;
+  align-items: center;
+  text-align: left;
+}
+
+.copyright {
+  width: 150%;
+  color: white;
+  padding: 0 16px 0 16px;
+  text-align: left;
+}
+
+.foot-links-container {
+  text-align: right;
+  align-items: center;
+  display: flex;
+  width: 20%;
+  padding-right: 16px;
+}
+
+.foot-link {
+  width: 100%;
+  align-items: none;
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 50px;
+  background-color: #1f2021;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  font-size: 10px;
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+  top: -22px;
+  left: -40px;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: black;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transform: opacity;
+  transition: 0.3s ease;
+}
+
+.overlayContainer {
+  position: relative;
+}
+
+.logoContainer {
+  position: absolute;
+  right: 10px;
+}
+
+.overlayContainer:hover .overlay {
+  opacity: 0.5;
+  transform: opacity;
+}
+
+.logoContainer:hover .overlay {
+  opacity: 0.5;
+  transform: opacity;
+}
+
+.logo:hover .overlay {
+  opacity: 0.5;
+  transform: opacity;
+}
+
+.clicked-button-color {
+  color: #00ced1 !important;
+}
+
+.buttonCustom {
+  color: white;
+  font-weight: 600;
+  padding: 0 16px 0 16px;
+}
+
+.buttonCustom:focus {
+  outline: 0;
+}
+
+/* Used on dropdown-menu to prevent text being selected as it is not really a link or button and so text would be selected when clicked */
+.unselectable {
+  -moz-user-select: -moz-none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.menuButton {
+  border: 1px solid black;
+  border-radius: 50px 20px;
+  background: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8' standalone='no'%3F%3E%3C!DOCTYPE svg PUBLIC '-//W3C//DTD SVG 1.1//EN' 'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'%3E%3Csvg version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' width='138px' height='47px' viewBox='0 0 138 47' enable-background='new 0 0 138 47' xml:space='preserve'%3E%3Cimage id='image0' width='138' height='47' x='0' y='0' xlink:href='data:image/png;base64,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%0AMFPI0PgAAAAASUVORK5CYII=' /%3E%3C/svg%3E")
+    no-repeat;
+  font-family: "Raleway", sans-serif;
+  color: white;
+  opacity: 1;
+  background-position: 0% 60%;
+  transition: background-position 0.3s;
+  display: none;
+  outline: 0;
+  text-align: left;
+  font-weight: 600;
+  padding: 2px 16px 2px 16px;
+}
+
+.menuButton.menuClicked {
+  background-position: 0% -95%;
+}
+
+.dropdown-menu-items {
+  font-family: "Raleway", sans-serif;
+  color: white;
+  font-weight: 600;
+  padding: 4px 0 4px 0;
+}
+
+.dropdown-menu-items:focus {
+  outline: 0;
+}
+
+.dropdown-menu {
+  position: relative;
+  display: inline-block;
+  border-radius: 50px 20px;
+  display: none;
+  text-align: left;
+  border: 4px solid #00ced1;
+  left: 15px;
+}
+
+.dropdown-container {
+  top: 45px;
+  left: -20px;
+  position: absolute;
+  background-color: black;
+  width: 420px;
+  padding: 0px 16px;
+  height: 0px;
+  transition: height 0.3s ease;
+  display: none;
+  flex-direction: column;
+  display: flex;
+  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+.dropdown-container.visible {
+  height: 125px;
+  border-bottom: 4px solid #00ced1;
+  border-radius: 0 0 0.25rem 0.25rem;
+  z-index: 1;
+}
+
+@media only screen and (max-width: 1080px) {
+  .copyright {
+    width: 75%;
+  }
+}
+
+@media only screen and (max-width: 920) {
+  /* For mobile phones: */
+  nav {
+    padding: 17px 0px 17px 0px;
+  }
+
+  .buttonCustom {
+    opacity: 0;
+    display: none;
+  }
+
+  .menuButton {
+    display: inline-block;
+  }
+
+  .dropdown-menu {
+    display: inline-block;
+  }
+  .copyright {
+    width: 75%;
+  }
+}
+
+.app-plyr {
+  border-top: 1px solid #ced6bc;
+  border-bottom: 1px solid #ced6bc;
+  padding-top: 10px;
+  padding-bottom: 35px;
+  background-color: rgb(247, 250, 250);
+}
