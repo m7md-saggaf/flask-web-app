@@ -1,0 +1,68 @@
+{% extends "base.html" %} {% block title %}Live{% endblock %} {% block content %}
+<ul class="list-group list-group-flush" id="notes"> 
+  <li class="list-group-item" align="center">
+    <div>
+
+        <svg width="226px" height="121px" viewBox="367 73 226 121" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+
+      <g id="Overall" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"
+        transform="translate(367.000000, 73.000000)">
+        <g id="Left-Waves" stroke="#9EABB8" stroke-linecap="round">
+
+          <circle class="w-01" stroke-linejoin="round" stroke-dasharray="31,238"
+            transform="translate(76.000000, 59.000000) scale(-1, 1) rotate(-44.000000) translate(-76.000000, -59.000000) "
+            cx="76" cy="59" r="20"></circle>
+
+          <circle class="w-02" stroke-dasharray="45,238" opacity="0.400000006"
+            transform="translate(74.500000, 59.500000) scale(-1, 1) rotate(-44.000000) translate(-74.500000, -59.500000) "
+            cx="74.5" cy="59.5" r="28.5"></circle>
+
+          <circle class="w-03" stroke-dasharray="59,238" opacity="0.15"
+            transform="translate(69.500000, 59.500000) scale(-1, 1) rotate(-44.000000) translate(-69.500000, -59.500000) "
+            cx="69.5" cy="59.5" r="36.137909"></circle>
+        </g>
+
+        <g id="Right-Waves"
+          transform="translate(165.500000, 61.500000) scale(-1, 1) translate(-165.500000, -61.500000) translate(105.000000, 2.000000)"
+          stroke="#9EABB8" stroke-linecap="round">
+          <circle class="w-01" stroke-linejoin="round" stroke-dasharray="31,238" opacity="0.650000036"
+            transform="translate(76.000000, 59.000000) scale(-1, 1) rotate(-44.000000) translate(-76.000000, -59.000000) "
+            cx="76" cy="59" r="20"></circle>
+          <circle class="w-02" stroke-dasharray="45,238" opacity="0.400000006"
+            transform="translate(74.500000, 59.500000) scale(-1, 1) rotate(-44.000000) translate(-74.500000, -59.500000) "
+            cx="74.5" cy="59.5" r="28.5"></circle>
+          <circle class="w-03" stroke-dasharray="59,238" opacity="0.15"
+            transform="translate(69.137909, 57.137909) scale(-1, 1) rotate(-44.000000) translate(-69.137909, -57.137909) "
+            cx="69.137909" cy="57.137909" r="36.137909"></circle>
+        </g>
+
+        <g id="Live-Badge" transform="translate(77.000000, 41.000000)">
+          <rect id="Rectangle-2545" fill="#FE555C" x="0" y="0.714285714" width="72" height="34.2857143" rx="4"></rect>
+          <path
+            d="M11.6520292,27 L11.6520292,8.68930687 L15.5345975,8.68930687 L15.5345975,23.79375 L22.961575,23.79375 L22.961575,27 L11.6520292,27 Z M26.1427761,27 L26.1427761,8.68930687 L30.0253444,8.68930687 L30.0253444,27 L26.1427761,27 Z M45.0796899,8.68930687 L48.9998315,8.68930687 L42.7751978,27 L38.5419459,27 L32.3298366,8.68930687 L36.2499781,8.68930687 L39.6941919,19.585547 C39.8862339,20.2284701 40.0845352,20.97784 40.2891016,21.8336793 C40.4936681,22.6895185 40.6209983,23.2844222 40.6710962,23.6184082 C40.7629424,22.8502404 41.0760496,21.5059667 41.6104273,19.585547 L45.0796899,8.68930687 Z M61.8498801,27 L51.3043236,27 L51.3043236,8.68930687 L61.8498801,8.68930687 L61.8498801,11.870508 L55.186892,11.870508 L55.186892,15.8908449 L61.3864768,15.8908449 L61.3864768,19.072046 L55.186892,19.072046 L55.186892,23.79375 L61.8498801,23.79375 L61.8498801,27 Z"
+            id="LIVE" fill="#FFFFFF"></path>
+        </g>
+      </g>
+    </svg>
+    </div>
+    <!--PLyr youtube player with tv show-->
+    <style>
+      .flex-container {
+        display: flex;
+        flex-wrap: nowrap;
+      }
+      
+      .flex-container > div {
+        background-color: #f1f1f1;
+        width: 100px;
+        margin: 10px;
+        line-height: 75px;
+        font-size: 30px;
+      }
+    </style>
+    <div class="flex-container">
+        <iframe align="center" width="1080" height="450" src="https://www.youtube.com/embed/ESJxFyRLNA4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+  </li>
+</ul>
+    {% endblock %}
