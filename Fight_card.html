@@ -1,42 +1,100 @@
-{% extends "base.html" %} {% block title %}Fight_card{% endblock %} {% block content%}
+<!doctype html>
+<html lang="en">
+
 <head>
-  <meta http-equiv="refresh" content="30">
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="title icon" type="image/png" href="img/title-img.png">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- Font-Awesome -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/all.js" integrity="sha384-xymdQtn1n3lH2wcu0qhcdaOpQwyoarkgLVxC/wZ5q7h9gHtxICrpcaSUfygqZGOe" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <title>SMMAF</title>
 </head>
-<!-- 
-If you’re embedding a spreadsheet, you can show or hide parts of the spreadsheet after you publish to the web.
 
-Open a file in Google Sheets.
-At the top, click File and then  Share and then Publish to web.
-In the window that appears, click Embed.
-Click Publish.
-Copy the code in the text box and paste it into your site or blog.
-To show or hide parts of the spreadsheet, edit the HTML on your site or blog.
-  gid=: The sheet ID.
-  range=: The rows and columns that are published to the web. For example, A1:B14.
-  widget=: True or false. If true, the sheet tab is displayed at the bottom.
-  headers=: True or false. If true, row numbers and column letters are displayed.
-  chrome=: True or false. If true, the title and footer are displayed.
-  -->
-<ul class="list-group list-group-flush">
-  <style>
-    .flex-container {
-      display: flex;
-      flex-wrap: nowrap;
-    }
-    
-    .flex-container > li {
-      background-color: #f1f1f1;
-      width: 100px;
-      margin: 10px;
-      text-align: center;
-      line-height: 75px;
-      font-size: 30px;
-    }
-  </style>
-  <li class="flex-container">
-    <iframe width="1200" height="690" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQ_YfCEFF53GminTFCNCpiQcq8bzYiwMvYl_lUAtHAJ8JDyIbOeBscCd-8ej5nj3wdU6xe1i1Ih9R90/pubhtml?gid=0&amp;single=false&amp;widget=false&amp;headers=false"></iframe>
-  </li>
-</ul>
+<body>
+    <!-- Navbar Starts -->
+    <nav class="navbar navbar-expand-sm navbar-light bg-dark fixed-top">
+        <a class="navbar-brand mx-auto" href="/">
+            <style>
+                .logo-image {
+                    width: 44px;
+                    height: 44px;
+                    border-radius: 8%;
+                    overflow: hidden;
+                    margin-top: 0px;
+                }
+            </style>
+            <div class="logo-image">
+                <img src="https://pbs.twimg.com/profile_images/1343770141482487808/MiNiD3nf_400x400.jpg" class="img-fluid">
+            </div>
+        </a>
+        <button type="button" class="navbar-toggler bg-light" data-toggle="collapse" data-target="#nav"><span class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse justify-content-between" id="nav">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link text-light font-weight-bold px-3" href="Fight_card.html">جدول النزالات</a></li>
+                <li class="nav-item dropdown"><a data-toggle="dropdown" class="nav-link text-light font-weight-bold px-3 dropdown-toggle" href="Tournament_bracket.html">جدول التصفيات</a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="12-13.html">براعم 12-13 سنه</a>
+                        <a class="dropdown-item" href="14-15.html">ناشئين 14-15 سنه</a>
+                        <a class="dropdown-item" href="16-17.html">شباب 16-17 سنه</a>
+                        <a class="dropdown-item" href="18.html">اولى 18+ سنه </a>
+                    </div>
+                </li>
+                <li class="nav-item"><a class="nav-link text-light font-weight-bold px-3" href="Live.html">بث مباشر</a></li>
+                <li class="nav-item"><a class="nav-link text-light font-weight-bold px-3" href="organizational_chart.html">جدول المنظمين</a></li>
+            </ul>
+            <form class="form-inline ml-3">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Search">
+                    <div class="input-group-append">
+                        <button type="button" class="btn"><i class="fa fa-search text-muted"></i></button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </nav>
+    <!-- navbar ends -->
+    <!-- content card starts  -->
+    <section class="p-5 bg-light">
+        <div class="container-fluid" align='center'>
+            <iframe width="812" height="690" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQ_YfCEFF53GminTFCNCpiQcq8bzYiwMvYl_lUAtHAJ8JDyIbOeBscCd-8ej5nj3wdU6xe1i1Ih9R90/pubhtml?gid=0&amp;single=false&amp;widget=false&amp;headers=false">
 
-  
-{% endblock %}
+            </iframe>
+        </div>
+    </section>
+    <!-- content card ends -->
+    <!-- footer starts  -->
+    <footer class="bg-secondary">
+        <div class="container">
+            <div class="row">
+                <div class="col text-center">
+                    <h1 class="text-white font-weight-light text-capitalize p-3">Saudi Mixed Martial Arts Federation</h1>
+                    <h3 class="text-light font-weight-light mb-3">Social Accounts</h3>
+                    <div class="py-2">
+                        <a href="https://www.youtube.com/channel/UCR-x0irLmiCokXYFDsX---A"><i class="fab fa-youtube fa-2x text-primary mx-3"></i></a>
+                        <a href="https://twitter.com/smmafksa?s=11"><i class="fab fa-twitter fa-2x text-info mx-3"></i></a>
+                        <a href="https://www.instagram.com/smmafksa/?utm_medium=copy_link"><i class="fab fa-instagram fa-2x text-danger mx-3"></i></a>
+                    </div>
+                    <p class="text-light py-4 m-0">&copy; Copyright 2021 - Made by <span style="color: #ffc107;">Mohammed Alsaggaf</span></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- footer ends -->
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+
+</html>
+<!-- Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+proident, sunt in culpa qui officia deserunt mollit anim id est laborum. -->
