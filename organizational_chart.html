@@ -1,0 +1,28 @@
+    <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+    <html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+    <title>Password Protected page</title>
+    <script type="text/javascript">
+    var s ="";
+
+    while (s!= "mkS334@GL@p")
+    {
+    s=prompt("Please enter your password");
+    if (s=="mkS334@GL@p"){ break; }
+
+    else
+    {
+    alert("Incorrect password-Try again");
+
+    }
+    }
+    </script>
+    </head>
+    <body>
+        {% extends "base.html" %} {% block title %}organizational_chart{% endblock %} {% block content %}
+
+            {% endblock %}
+
+    </body>
+    </html>
